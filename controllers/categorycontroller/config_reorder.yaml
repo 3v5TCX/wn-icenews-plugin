@@ -1,0 +1,4 @@
+title: CategoryController
+modelClass: icecollection\icenews\Models\Categorys
+toolbar:
+    buttons: reorder_toolbar

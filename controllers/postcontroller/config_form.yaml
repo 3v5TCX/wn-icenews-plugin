@@ -1,0 +1,10 @@
+name: PostController
+form: $/icecollection/icenews/models/posts/fields.yaml
+modelClass: icecollection\icenews\Models\Posts
+defaultRedirect: icecollection/icenews/postcontroller
+create:
+    redirect: 'icecollection/icenews/postcontroller/update/:id'
+    redirectClose: icecollection/icenews/postcontroller
+update:
+    redirect: icecollection/icenews/postcontroller
+    redirectClose: icecollection/icenews/postcontroller

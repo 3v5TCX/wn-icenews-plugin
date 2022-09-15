@@ -1,0 +1,12 @@
+fields:
+    title:
+        label: 'Тег'
+        span: auto
+        type: text
+        required: 1
+    slug:
+        label: 'Синоним'
+        span: auto
+        type: text
+        required: 1
+        preset: title

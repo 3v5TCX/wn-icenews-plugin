@@ -1,0 +1,10 @@
+name: CategoryController
+form: $/icecollection/icenews/models/categorys/fields.yaml
+modelClass: icecollection\icenews\Models\Categorys
+defaultRedirect: icecollection/icenews/categorycontroller
+create:
+    redirect: 'icecollection/icenews/categorycontroller/update/:id'
+    redirectClose: icecollection/icenews/categorycontroller
+update:
+    redirect: icecollection/icenews/categorycontroller
+    redirectClose: icecollection/icenews/categorycontroller

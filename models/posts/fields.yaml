@@ -1,0 +1,74 @@
+fields:
+    title:
+        label: Заголовок
+        span: full
+        required: 1
+        type: text
+    short_story:
+        label: 'Краткая новость'
+        size: small
+        span: full
+        required: 1
+        type: richeditor
+    full_story:
+        label: 'Полная новость'
+        size: large
+        span: full
+        type: richeditor
+    tags:
+        label: Теги
+        nameFrom: title
+        descriptionFrom: title
+        span: full
+        type: taglist
+        mode: relation
+    categorys:
+        label: Категория
+        nameFrom: title
+        descriptionFrom: title
+        span: full
+        type: taglist
+        mode: relation
+    descript:
+        label: Описание
+        span: auto
+        type: text
+    keywords:
+        label: 'Ключевые слова'
+        span: auto
+        type: text
+    slug:
+        label: Синоним
+        span: auto
+        type: text
+        preset: title
+        required: 1
+    published_at:
+        label: 'Дата публикации'
+        mode: datetime
+        span: auto
+        type: datepicker
+    is_published:
+        label: Опубликовать
+        span: auto
+        type: switch
+    is_approved:
+        label: Проверена
+        span: auto
+        type: switch
+    is_fixed:
+        label: Зафиксировать
+        span: auto
+        type: switch
+    allow_comments:
+        label: Комментарии
+        span: auto
+        type: switch
+    allow_main:
+        label: 'Показывать на главной'
+        span: auto
+        type: switch
+    allow_global:
+        label: 'Показывать глобально'
+        span: auto
+        type: switch

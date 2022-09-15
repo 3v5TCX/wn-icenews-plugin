@@ -1,0 +1,25 @@
+{
+    "name": "icecollection/wn-icenews-plugin",
+    "type": "winter-plugin",
+    "description": "News feed for Winter CMS",
+    "homepage": "https://github.com/3v5TCX/wn-icenews-plugin.git",
+    "keywords": ["wintercms", "cms", "icenews"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Belonogov Ilya Y.",
+            "homepage": "https://belonogov.com",
+            "role": "Author"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/3v5TCX/wn-icenews-plugin.git"
+    },
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "icenews"
+    }
+}

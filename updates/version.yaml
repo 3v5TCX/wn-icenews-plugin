@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table icecollection_icenews_posts'
+    - builder_table_create_icecollection_icenews_posts.php
+1.0.3:
+    - 'Created table icecollection_icenews_category'
+    - builder_table_create_icecollection_icenews_categorys.php
+1.0.4:
+    - 'Created table icecollection_icenews_tags'
+    - builder_table_create_icecollection_icenews_tags.php
+1.0.5:
+    - create_icecollection_icenews_post_tag
+    - migration105.php
+1.0.6:
+    - create_icecollection_icenews_post_category
+    - migration106.php
