@@ -22,4 +22,10 @@
     "extra": {
         "installer-name": "icenews"
     }
+	
+	"scripts": {
+        "post-create-project-cmd": [
+            "@php php artisan winter:up"
+        ]
+	}
 }
