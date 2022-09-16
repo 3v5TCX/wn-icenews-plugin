@@ -23,7 +23,7 @@
         "installer-name": "icenews"
     },
 	"scripts": {
-        "post-create-project-cmd": [
+        "post-update-cmd": [
             "@php php artisan winter:up"
         ]
 	}
