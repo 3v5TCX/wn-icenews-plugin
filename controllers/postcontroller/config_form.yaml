@@ -1,6 +1,6 @@
 name: PostController
-form: $/icecollection/icenews/models/posts/fields.yaml
-modelClass: icecollection\icenews\Models\Posts
+form: $/icecollection/icenews/models/post/fields.yaml
+modelClass: icecollection\icenews\Models\Post
 defaultRedirect: icecollection/icenews/postcontroller
 create:
     redirect: 'icecollection/icenews/postcontroller/update/:id'

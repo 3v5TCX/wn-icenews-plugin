@@ -1,6 +1,6 @@
 name: TagController
-form: $/icecollection/icenews/models/tags/fields.yaml
-modelClass: icecollection\icenews\Models\Tags
+form: $/icecollection/icenews/models/tag/fields.yaml
+modelClass: icecollection\icenews\Models\Tag
 defaultRedirect: icecollection/icenews/tagcontroller
 create:
     redirect: 'icecollection/icenews/tagcontroller/update/:id'

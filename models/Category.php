@@ -5,10 +5,10 @@ use Model;
 /**
  * Model
  */
-class Categorys extends Model
+class Category extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
-    
+
     use \Winter\Storm\Database\Traits\SoftDelete;
 
     protected $dates = ['deleted_at'];

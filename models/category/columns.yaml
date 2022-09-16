@@ -6,36 +6,29 @@ columns:
         label: 'Название категории'
         type: text
         searchable: true
-        sortable: true
     descript:
         label: 'Описание'
         type: text
         searchable: true
-        sortable: true
     keywords:
         label: 'Ключевые слова'
         type: text
         searchable: true
-        sortable: true
     slug:
         label: 'Синоним'
         type: text
         searchable: true
-        sortable: true
     is_published:
         label: 'Опубликован'
         type: switch
         searchable: true
-        sortable: true
     created_at:
         label: 'Дата и время создания'
         type: datetime
         searchable: false
-        sortable: false
         format: 'd.m.y H:i'
     updated_at:
         label: 'Дата и время обновления'
         type: datetime
         searchable: false
-        sortable: false
         format: 'd.m.y H:i'

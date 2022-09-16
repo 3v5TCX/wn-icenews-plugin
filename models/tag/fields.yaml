@@ -8,5 +8,5 @@ fields:
         label: 'Синоним'
         span: auto
         type: text
-        required: 1
         preset: title
+        required: 1

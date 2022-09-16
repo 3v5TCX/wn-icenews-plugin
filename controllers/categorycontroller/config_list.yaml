@@ -1,5 +1,5 @@
-list: $/icecollection/icenews/models/categorys/columns.yaml
-modelClass: icecollection\icenews\Models\Categorys
+list: $/icecollection/icenews/models/category/columns.yaml
+modelClass: icecollection\icenews\Models\Category
 title: CategoryController
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

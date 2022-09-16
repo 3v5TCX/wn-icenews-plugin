@@ -1,5 +1,5 @@
-list: $/icecollection/icenews/models/tags/columns.yaml
-modelClass: icecollection\icenews\Models\Tags
+list: $/icecollection/icenews/models/tag/columns.yaml
+modelClass: icecollection\icenews\Models\Tag
 title: TagController
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

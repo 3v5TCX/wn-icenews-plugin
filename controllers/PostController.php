@@ -4,10 +4,9 @@ use Backend\Classes\Controller;
 use BackendMenu;
 
 use Flash;
-use icecollection\icenews\Models\Posts;
+use icecollection\icenews\Models\Post;
 use Redirect;
 use ApplicationException;
-use icecollection\icenews\models\post;
 
 
 class PostController extends Controller
@@ -30,8 +29,8 @@ class PostController extends Controller
 
     public function index()
     {
-        $this->vars['postsTotal'] = Posts::count();
-        $this->vars['postsPublished'] = Posts::isPublished()->count();
+        $this->vars['postsTotal'] = Post::count();
+        $this->vars['postsPublished'] = Post::isPublished()->count();
         $this->vars['postsDrafts'] = $this->vars['postsTotal'] - $this->vars['postsPublished'];
 
         $this->asExtension('ListController')->index();

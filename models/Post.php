@@ -11,7 +11,7 @@ use Backend\Models\User;
 /**
  * Model
  */
-class Posts extends Model
+class Post extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
 
@@ -45,13 +45,13 @@ class Posts extends Model
 
     public $belongsToMany = [
         'tags'=> [
-            \icecollection\icenews\models\tags::class,
+            \icecollection\icenews\models\tag::class,
             "table"=>"icecollection_icenews_post_tag",
             "key"=>"post_id",
             "otherKey"=>"tag_id",
         ],
         'categorys'=> [
-            \icecollection\icenews\models\categorys::class,
+            \icecollection\icenews\models\category::class,
             "table"=>"icecollection_icenews_post_category",
             "key"=>"post_id",
             "otherKey"=>"category_id",

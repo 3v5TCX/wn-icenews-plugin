@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Tags extends Model
+class Tag extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
 
@@ -23,7 +23,7 @@ class Tags extends Model
 
     public $belongsToMany = [
         'posts'=> [
-            \icecollection\icenews\models\posts::class,
+            \icecollection\icenews\models\post::class,
             "table"=>"icecollection_icenews_post_tag",
             "key"=>"tag_id",
             "otherKey"=>"post_id",

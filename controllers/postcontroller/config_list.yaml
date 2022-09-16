@@ -1,5 +1,5 @@
-list: $/icecollection/icenews/models/posts/columns.yaml
-modelClass: icecollection\icenews\Models\Posts
+list: $/icecollection/icenews/models/post/columns.yaml
+modelClass: icecollection\icenews\Models\Post
 title: PostController
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
