@@ -50,7 +50,7 @@ class Post extends Model
             "key"=>"post_id",
             "otherKey"=>"tag_id",
         ],
-        'categorys'=> [
+        'categories'=> [
             \icecollection\icenews\models\category::class,
             "table"=>"icecollection_icenews_post_category",
             "key"=>"post_id",

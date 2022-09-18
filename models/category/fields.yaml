@@ -12,7 +12,7 @@ fields:
         type: text
         comment: 'Используется в адресной строке браузера'
         preset: title
-    descript:
+    description:
         label: 'Описание'
         span: auto
         type: text

@@ -22,14 +22,14 @@ fields:
         span: full
         type: taglist
         mode: relation
-    categorys:
+    categories:
         label: Категория
         nameFrom: title
         descriptionFrom: title
         span: full
         type: taglist
         mode: relation
-    descript:
+    description:
         label: Описание
         span: auto
         type: text

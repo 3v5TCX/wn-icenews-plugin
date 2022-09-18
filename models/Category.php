@@ -17,7 +17,7 @@ class Category extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'icecollection_icenews_categorys';
+    public $table = 'icecollection_icenews_categories';
 
     /**
      * @var array Validation rules

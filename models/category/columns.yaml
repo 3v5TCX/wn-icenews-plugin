@@ -6,7 +6,7 @@ columns:
         label: 'Название категории'
         type: text
         searchable: true
-    descript:
+    description:
         label: 'Описание'
         type: text
         searchable: true

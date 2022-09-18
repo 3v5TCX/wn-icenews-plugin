@@ -15,7 +15,7 @@ class BuilderTableCreateIcecollectionIcenewsPosts extends Migration
             $table->text('short_story')->nullable();
             $table->text('full_story')->nullable();
             $table->string('title', 512)->nullable();
-            $table->string('descript', 512)->nullable();
+            $table->string('description', 512)->nullable();
             $table->string('keywords', 512)->nullable();
             $table->string('slug', 512)->nullable();
             $table->timestamp('published_at')->nullable();

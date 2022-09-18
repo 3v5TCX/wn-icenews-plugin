@@ -4,8 +4,8 @@
     - 'Created table icecollection_icenews_posts'
     - builder_table_create_icecollection_icenews_posts.php
 1.0.3:
-    - 'Created table icecollection_icenews_categorys'
-    - builder_table_create_icecollection_icenews_categorys.php
+    - 'Created table icecollection_icenews_categories'
+    - builder_table_create_icecollection_icenews_categories.php
 1.0.4:
     - 'Created table icecollection_icenews_tags'
     - builder_table_create_icecollection_icenews_tags.php

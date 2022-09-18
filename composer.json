@@ -21,10 +21,5 @@
     },
     "extra": {
         "installer-name": "icenews"
-    },
-	"scripts": {
-        "post-update-cmd": [
-            "@php php artisan winter:up"
-        ]
-	}
+    }
 }
