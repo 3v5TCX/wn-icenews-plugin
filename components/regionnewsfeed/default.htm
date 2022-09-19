@@ -1,0 +1,44 @@
+
+<div class="carousel-wrapper newsfeed-wrapper">
+    <div class="newsfeed__header">
+        <h3 data-contrast-theme-class="" data-default-theme-class="animate-onscroll" class="animate-onscroll">
+            <a href="{{ regionNewsPage|page }}" class="visited-false">Новости регионального уровня</a>
+        </h3>
+        <!--<div data-contrast-theme-class="d_none" data-default-theme-class="carousel-arrows animate-onscroll" class="carousel-arrows animate-onscroll">-->
+            <!--<span class="news-prev"><i class="icons icon-left-dir"></i></span>-->
+            <!--<span class="news-next"><i class="icons icon-right-dir"></i></span>-->
+        <!--</div>-->
+    </div>
+    <div data-contrast-theme-class="d_none"
+         data-default-theme-class="newsfeed"
+         class="newsfeed">
+        <div class="row">
+            {% for post in region_posts[:3] %}
+            <a  href="{{ post.url }}" class="newsfeed__item col-md-4">
+                {% if imgShowParam == true %}
+                    <div class="newsfeed__item__img" href="#{{ post.url }}" style="background-image: url({% if post.featured_images %}http://dep-hmao.iicavers.com{{ post.featured_images.thumb(585, 390, 'crop') }}{% else %}/plugins/avers/news/assets/images/default.jpg{% endif %})" title="{{ post.featured_images.alt }}">
+                    </div>
+                {% endif %}
+                <div class="newsfeed__item__date">
+                    <span>{{ post.published_at|date('d.m.Y') }}</span>
+                </div>
+                <p class="newsfeed__item__article">{{ str_limit(post.excerpt, 60) }} </p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="d_none"
+         data-contrast-theme-class="newsfeed-contrast"
+         data-default-theme-class="d_none">
+        <div class="row">
+            {% for post in region_posts %}
+            <div class="newsfeed-contrast__item">
+                <div class="newsfeed-contrast__item__date">
+                    <span>{{ post.published_at|date('d.m.Y') }}</span>
+                </div>
+                <a class="newsfeed-contrast__item__article"><a href="{{ post.url }}">{{ post.excerpt }}</a></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

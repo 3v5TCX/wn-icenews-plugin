@@ -1,74 +1,76 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
 fields:
+
     title:
-        label: Заголовок
-        span: full
-        required: 1
-        type: text
-    short_story:
-        label: 'Краткая новость'
-        size: small
-        span: full
-        required: 1
-        type: richeditor
-    full_story:
-        label: 'Полная новость'
-        size: large
-        span: full
-        type: richeditor
-    tags:
-        label: Теги
-        nameFrom: title
-        descriptionFrom: title
-        span: full
-        type: taglist
-        mode: relation
-    categories:
-        label: Категория
-        nameFrom: title
-        descriptionFrom: title
-        span: full
-        type: taglist
-        mode: relation
-    description:
-        label: Описание
-        span: auto
-        type: text
-    keywords:
-        label: 'Ключевые слова'
-        span: auto
-        type: text
+        label: icecollection.news::lang.post.title
+        span: left
+        placeholder: icecollection.news::lang.post.title_placeholder
+
     slug:
-        label: Синоним
-        span: auto
-        type: text
-        preset: title
-        required: 1
-    published_at:
-        label: 'Дата публикации'
-        mode: datetime
-        span: auto
-        type: datepicker
-    is_published:
-        label: Опубликовать
-        span: auto
-        type: switch
-    is_approved:
-        label: Проверена
-        span: auto
-        type: switch
-    is_fixed:
-        label: Зафиксировать
-        span: auto
-        type: switch
-    allow_comments:
-        label: Комментарии
-        span: auto
-        type: switch
-    allow_main:
-        label: 'Показывать на главной'
-        span: auto
-        type: switch
-    allow_global:
-        label: 'Показывать глобально'
-        span: auto
-        type: switch
+        label: icecollection.news::lang.post.slug
+        span: right
+        placeholder: icecollection.news::lang.post.slug_placeholder
+        attributes:
+            data-input-preset: 'input[name="Post[title]"]'
+            data-input-preset-type: slug
+            data-input-preset-closest-parent: form
+
+    toolbar:
+        type: partial
+        path: post_toolbar
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        content:
+            tab: icecollection.news::lang.post.tab_edit
+            type: richeditor
+            size: giant
+            cssClass: icecollection_news
+
+        categories:
+            tab: icecollection.news::lang.post.tab_categories
+            type: relation
+            commentAbove: icecollection.news::lang.post.categories_comment
+            placeholder: icecollection.news::lang.post.categories_placeholder
+
+        is_published:
+            tab: icecollection.news::lang.post.tab_manage
+            label: icecollection.news::lang.post.is_published
+            span: left
+            type: checkbox
+
+        featured_images:
+            tab: icecollection.news::lang.post.tab_manage
+            label: icecollection.news::lang.post.featured_images
+            span: right
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200
+
+        published_at:
+            tab: icecollection.news::lang.post.tab_manage
+            label: icecollection.news::lang.post.published_on
+            span: left
+            type: datepicker
+            mode: date
+
+        excerpt:
+            tab: icecollection.news::lang.post.tab_manage
+            label: icecollection.news::lang.post.excerpt
+            span: left
+            type: textarea
+            # size: small
+
+        additional_images:
+            tab: icecollection.news::lang.post.tab_manage
+            label: icecollection.news::lang.post.additional_images
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200

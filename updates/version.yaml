@@ -1,17 +1,11 @@
 1.0.1:
-    - 'Initialize plugin.'
+- Initialize plugin
+- Create tables
+- create_posts_table.php
+- create_categories_table.php
+- Seed all tables
+- seed_all_tables.php
 1.0.2:
-    - 'Created table icecollection_icenews_posts'
-    - builder_table_create_icecollection_icenews_posts.php
+- Add additional images to news
 1.0.3:
-    - 'Created table icecollection_icenews_categories'
-    - builder_table_create_icecollection_icenews_categories.php
-1.0.4:
-    - 'Created table icecollection_icenews_tags'
-    - builder_table_create_icecollection_icenews_tags.php
-1.0.5:
-    - create_icecollection_icenews_post_tag
-    - migration105.php
-1.0.6:
-    - create_icecollection_icenews_post_category
-    - migration106.php
+- Delete images after deleting news

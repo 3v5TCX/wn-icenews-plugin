@@ -1,34 +1,13 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
 columns:
-    id:
-        label: id
-        type: number
-    title:
-        label: 'Название категории'
-        type: text
+
+    name:
+        label: icecollection.news::lang.category.name
         searchable: true
-    description:
-        label: 'Описание'
-        type: text
-        searchable: true
-    keywords:
-        label: 'Ключевые слова'
-        type: text
-        searchable: true
-    slug:
-        label: 'Синоним'
-        type: text
-        searchable: true
-    is_published:
-        label: 'Опубликован'
-        type: switch
-        searchable: true
-    created_at:
-        label: 'Дата и время создания'
-        type: datetime
-        searchable: false
-        format: 'd.m.y H:i'
-    updated_at:
-        label: 'Дата и время обновления'
-        type: datetime
-        searchable: false
-        format: 'd.m.y H:i'
+
+    post_count:
+        label: icecollection.news::lang.category.posts
+        sortable: false

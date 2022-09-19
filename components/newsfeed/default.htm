@@ -1,0 +1,25 @@
+{% if posts|length > 0 %}
+<div class="newsfeed-wrapper">
+    <div class="newsfeed__header">
+        <h3>
+            <a href="{{ newsPage|page }}">Новости и события</a>
+        </h3>
+    </div>
+    <div class="newsfeed">
+        <div class="row">
+            {% for post in posts[:3] %}
+            <a  href="{{ post.url }}" class="newsfeed__item col-md-4">
+                {% if imgShowParam == true %}
+                    <div class="newsfeed__item-img" href="{{ post.url }}" style="background-image: url({% if post.featured_images %}{{ post.featured_images.thumb(585, 390, 'crop') }}{% else %}/plugins/icecollection/news/assets/images/default.jpg{% endif %})" title="{{ post.featured_images.alt }}">
+                    </div>
+                {% endif %}
+                <div class="newsfeed__item-date">
+                    <span>{{ post.published_at|date('d.m.Y') }}</span>
+                </div>
+                <p class="newsfeed__item-preview">{{ str_limit(post.excerpt, 60) }} </p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}

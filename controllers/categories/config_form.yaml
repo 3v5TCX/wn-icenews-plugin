@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: icecollection.news::lang.news.create_category
+form: ~/plugins/icecollection/news/models/category/fields.yaml
+modelClass: IceCollection\News\Models\Category
+defaultRedirect: icecollection/news/categories
+
+create:
+    redirect: icecollection/news/categories/update/:id
+    redirectClose: icecollection/news/categories
+
+update:
+    redirect: icecollection/news/categories
+    redirectClose: icecollection/news/categories

@@ -1,0 +1,36 @@
+<!-- <section class="col-lg-9 col-md-9 col-sm-9"> -->
+    <!-- <div class="page_title translucent_bg_purple image_fixed image_bg_docs t_align_c relative wrapper m_bottom_20">
+        <h1 class="color_light fw_ex_light m_bottom_5">{{ posts[0].categories[0].name }}</h1>
+    </div> -->
+    <div class="grid">
+         {% if posts|length > 0 %}
+            {% for post in posts %}
+                <figure class="effect-sarah">
+                    <img src="{{ post.featured_images.path }}" alt="{{ post.featured_images.alt }}"/>
+                    <figcaption>
+                        <h4 class="dotdot">{{ post.title }}</h4>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url }}">Подробнее</a>
+                    </figcaption>           
+                </figure>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <!--pagination-->
+    {% if posts.getLastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.getCurrentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.getCurrentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.getLastPage %}
+            <li class="{{ posts.getCurrentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+        {% if posts.getLastPage > posts.getCurrentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.getCurrentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+    {% endif %}
+<!-- </section> -->

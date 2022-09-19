@@ -1,43 +1,39 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
 columns:
-    id:
-        label: id
-        type: number
-    author:
-        label: 'Автор'
-        relation: user
-        select: login
-        searchable: true
-        type: text
-    title:
-        label: 'Заголовок'
-        type: text
-    published_at:
-        label: 'Дата публикации'
-        type: datetime
-        format: 'd.m.Y H:i'
-    is_published:
-        label: 'Опубликована'
-        type: switch
-    is_approved:
-        label: 'Проверена'
-        type: switch
-    is_fixed:
-        label: 'Зафиксирована'
-        type: switch
-    allow_comments:
-        label: 'Комментарии'
-        type: switch
-    allow_main:
-        label: 'Публиковать на главной'
-        type: switch
-    allow_global:
-        label: 'Публиковать глобально'
-        type: switch
-    created_at:
-        label: 'Дата и время создания'
-        type: datetime
-        format: 'd.m.Y H:i'
-    updated_at:
-        label: 'Дата и время обновления'
-        type: datetime
-        format: 'd.m.Y H:i'
+
+  title:
+    label: icecollection.news::lang.post.title
+    searchable: true
+
+  # author:
+  #   label: Author
+  #   relation: user
+  #   select: login
+  #   searchable: true
+
+  categories:
+    label: icecollection.news::lang.post.categories
+    relation: categories
+    select: name
+    searchable: true
+    sortable: false
+
+  created_at:
+    label: icecollection.news::lang.post.created
+    type: date
+    invisible: true
+    format: d.m.Y H:i:s
+
+  updated_at:
+    label: icecollection.news::lang.post.updated
+    type: date
+    invisible: true
+    format: d.m.Y H:i:s
+
+  published_at:
+    label: icecollection.news::lang.post.published
+    type: datetime
+    format: d.m.Y H:i:s

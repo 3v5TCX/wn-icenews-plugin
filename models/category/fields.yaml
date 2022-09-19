@@ -1,29 +1,15 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
 fields:
-    title:
-        label: 'Название категории'
-        span: auto
-        required: 1
-        type: text
-        comment: 'Используется в каталоге новостей'
+    name:
+        label: icecollection.news::lang.category.name
+        placeholder: icecollection.news::lang.category.name_placeholder
+        span: left
+
     slug:
-        label: 'Синоним'
-        span: auto
-        required: 1
-        type: text
-        comment: 'Используется в адресной строке браузера'
-        preset: title
-    description:
-        label: 'Описание'
-        span: auto
-        type: text
-        comment: 'Используется для поисковой оптимизации и отображения на сайте'
-    keywords:
-        label: 'Ключевые слова'
-        span: auto
-        type: text
-        comment: 'Используется для поисковой оптимизации'
-    is_published:
-        label: 'Показывать на сайте'
-        span: auto
-        type: switch
-        comment: 'Ели не опубликовано, будут скрыты все новости из данной категории'
+        label: icecollection.news::lang.category.slug
+        span: right
+        placeholder: icecollection.news::lang.category.slug_placeholder
+        preset: name

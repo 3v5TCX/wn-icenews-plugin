@@ -1,11 +1,10 @@
-<?php namespace icecollection\icenews\Components;
+<?php namespace IceCollection\News\Components;
 
 use Redirect;
 use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
-use icecollection\icenews\models\Post as NewsPost;
-use icecollection\icenews\models\Category as NewsCategory;
-
+use IceCollection\News\Models\Post as NewsPost;
+use IceCollection\News\Models\Category as NewsCategory;
 
 class Posts extends ComponentBase
 {
@@ -54,8 +53,8 @@ class Posts extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'icecollection.icenews::lang.settings.posts_title',
-            'description' => 'icecollection.icenews::lang.settings.posts_description'
+            'name'        => 'icecollection.news::lang.settings.posts_title',
+            'description' => 'icecollection.news::lang.settings.posts_description'
         ];
     }
 
@@ -63,46 +62,46 @@ class Posts extends ComponentBase
     {
         return [
             'pageNumber' => [
-                'title'       => 'icecollection.icenews::lang.settings.posts_pagination',
-                'description' => 'icecollection.icenews::lang.settings.posts_pagination_description',
+                'title'       => 'icecollection.news::lang.settings.posts_pagination',
+                'description' => 'icecollection.news::lang.settings.posts_pagination_description',
                 'type'        => 'string',
                 'default'     => '{{ :page }}',
             ],
             'categoryFilter' => [
-                'title'       => 'icecollection.icenews::lang.settings.posts_filter',
-                'description' => 'icecollection.icenews::lang.settings.posts_filter_description',
+                'title'       => 'icecollection.news::lang.settings.posts_filter',
+                'description' => 'icecollection.news::lang.settings.posts_filter_description',
                 'type'        => 'string',
                 'default'     => ''
             ],
             'postsPerPage' => [
-                'title'             => 'icecollection.icenews::lang.settings.posts_per_page',
+                'title'             => 'icecollection.news::lang.settings.posts_per_page',
                 'type'              => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'icecollection.icenews::lang.settings.posts_per_page_validation',
+                'validationMessage' => 'icecollection.news::lang.settings.posts_per_page_validation',
                 'default'           => '10',
             ],
             'noPostsMessage' => [
-                'title'        => 'icecollection.icenews::lang.settings.posts_no_posts',
-                'description'  => 'icecollection.icenews::lang.settings.posts_no_posts_description',
+                'title'        => 'icecollection.news::lang.settings.posts_no_posts',
+                'description'  => 'icecollection.news::lang.settings.posts_no_posts_description',
                 'type'         => 'string',
                 'default'      => 'No posts found'
             ],
             'sortOrder' => [
-                'title'       => 'icecollection.icenews::lang.settings.posts_order',
-                'description' => 'icecollection.icenews::lang.settings.posts_order_description',
+                'title'       => 'icecollection.news::lang.settings.posts_order',
+                'description' => 'icecollection.news::lang.settings.posts_order_description',
                 'type'        => 'dropdown',
                 'default'     => 'published_at desc'
             ],
             'categoryPage' => [
-                'title'       => 'icecollection.icenews::lang.settings.posts_category',
-                'description' => 'icecollection.icenews::lang.settings.posts_category_description',
+                'title'       => 'icecollection.news::lang.settings.posts_category',
+                'description' => 'icecollection.news::lang.settings.posts_category_description',
                 'type'        => 'dropdown',
                 'default'     => 'news/category',
                 'group'       => 'Links',
             ],
             'postPage' => [
-                'title'       => 'icecollection.icenews::lang.settings.posts_post',
-                'description' => 'icecollection.icenews::lang.settings.posts_post_description',
+                'title'       => 'icecollection.news::lang.settings.posts_post',
+                'description' => 'icecollection.news::lang.settings.posts_post_description',
                 'type'        => 'dropdown',
                 'default'     => 'news/post',
                 'group'       => 'Links',

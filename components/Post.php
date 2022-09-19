@@ -1,14 +1,13 @@
-<?php namespace icecollection\icenews\Components;
+<?php namespace IceCollection\News\Components;
 
 use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
-use icecollection\icenews\models\Post as NewsPost;
-use icecollection\icenews\models\Category as NewsCategory;
+use IceCollection\News\Models\Post as NewsPost;
 
 class Post extends ComponentBase
 {
     /**
-     * @var Avers\News\Models\Post The post model used for display.
+     * @var IceCollection\News\Models\Post The post model used for display.
      */
     public $post;
 
@@ -20,8 +19,8 @@ class Post extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'avers.news::lang.settings.post_title',
-            'description' => 'avers.news::lang.settings.post_description'
+            'name'        => 'icecollection.news::lang.settings.post_title',
+            'description' => 'icecollection.news::lang.settings.post_description'
         ];
     }
 
@@ -29,14 +28,14 @@ class Post extends ComponentBase
     {
         return [
             'slug' => [
-                'title'       => 'avers.news::lang.settings.post_slug',
-                'description' => 'avers.news::lang.settings.post_slug_description',
+                'title'       => 'icecollection.news::lang.settings.post_slug',
+                'description' => 'icecollection.news::lang.settings.post_slug_description',
                 'default'     => '{{ :slug }}',
                 'type'        => 'string'
             ],
             'categoryPage' => [
-                'title'       => 'avers.news::lang.settings.post_category',
-                'description' => 'avers.news::lang.settings.post_category_description',
+                'title'       => 'icecollection.news::lang.settings.post_category',
+                'description' => 'icecollection.news::lang.settings.post_category_description',
                 'type'        => 'dropdown',
                 'default'     => 'news/category',
                 'group'       => 'Ссылки',

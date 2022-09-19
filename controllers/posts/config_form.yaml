@@ -1,0 +1,22 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: icecollection.news::lang.news.create_post
+form: ~/plugins/icecollection/news/models/post/fields.yaml
+modelClass: IceCollection\News\Models\Post
+defaultRedirect: icecollection/news/posts
+
+create:
+    title: Создание новости
+    redirect: icecollection/news/posts/update/:id
+    redirectClose: icecollection/news/posts
+    flashSave: Новость успешно создана!
+
+update:
+    title: Редактирование новости
+    redirect: icecollection/news/posts
+    redirectClose: icecollection/news/posts
+    flashSave: Новость успешно изменена!
+    flashDelete: Новость успешно удалена.
+

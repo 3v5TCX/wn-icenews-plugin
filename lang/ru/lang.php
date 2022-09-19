@@ -1,7 +1,10 @@
-<?php return [
+<?php
+
+return [
     'plugin' => [
-        'name' => 'IceCollection: Новости',
-        'description' => 'Управление лентой новостей'
+        'name' => 'Новости',
+        'description' => 'Плагин добавления новостей на сайт.',
+        'author' => 'Аверс'
     ],
     'news' => [
         'menu_label' => 'Новости',
@@ -34,7 +37,7 @@
         'categories' => 'Категории',
         'created' => 'Дата создания',
         'updated' => 'Дата обновления',
-        'published' => 'Дата новости',
+        'is_published' => 'Дата новости (is_published)',
         'published_validation' => 'Пожалуйста, укажите дату публикации.',
         'tab_edit' => 'Редактор',
         'tab_categories' => 'Категории',
@@ -96,3 +99,4 @@
         'posts_post_description' => 'Название страницы для ссылки "подробнее". Это свойство используется по умолчанию компонентом.',
     ],
 ];
+
