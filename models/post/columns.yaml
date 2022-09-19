@@ -34,6 +34,6 @@ columns:
     format: d.m.Y H:i:s
 
   published_at:
-    label: icecollection.news::lang.post.published
+    label: icecollection.news::lang.post.is_published
     type: datetime
     format: d.m.Y H:i:s
