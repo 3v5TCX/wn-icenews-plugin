@@ -18,8 +18,8 @@ class Plugin extends PluginBase
     {
         return [
             'icecollection\icenews\components\Posts'           => 'newsPosts',
-            /*
             'icecollection\icenews\components\Post'            => 'newsPost',
+            /*
             'icecollection\icenews\components\Categories'      => 'newsCategories',
             'icecollection\icenews\components\Newsfeed'        => 'newsNewsfeed',
             'icecollection\icenews\components\RegionNewsPosts' => 'regionNewsPosts',

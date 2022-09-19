@@ -22,6 +22,13 @@ class PostController extends Controller
         BackendMenu::setContext('icecollection.icenews', 'main-menu-item', 'side-menu-item3');
     }
 
+    public function create()
+    {
+        parent::create();
+        BackendMenu::setContext('icecollection.icenews', 'main-menu-item', 'side-menu-item4');
+    }
+
+
     public function formBeforeCreate($model)
     {
         $model->user_id = $this->user->id;
@@ -34,12 +41,6 @@ class PostController extends Controller
         $this->vars['postsDrafts'] = $this->vars['postsTotal'] - $this->vars['postsPublished'];
 
         $this->asExtension('ListController')->index();
-    }
-
-    public function create()
-    {
-        parent::create();
-        BackendMenu::setContext('icecollection.icenews', 'main-menu-item', 'side-menu-item4');
     }
 
 }

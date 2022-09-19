@@ -1,0 +1,43 @@
+{% set month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'] %}
+
+<section class="page-heading">
+
+    <h1 class="page-heading__header">{{ post.title }}</h1>
+
+    <div class="page-heading__breadcrumb breadcrumb">
+        <a class="breadcrumb__home" href="{{ 'index'|page }}"><i class="icons icon-home"></i></a>
+        <span class="breadcrumb__delimiter">&nbsp/&nbsp</span>
+        <a href="{{ newsPage|page }}">Новости и события</a>
+    </div>
+
+</section>
+
+<div class="blog-post-single fullwidth-post post">
+
+    <div class="post-side-meta">
+        <div class="date">
+            <span class="day">{{ post.published_at|date('d') }}</span>
+            <span class="month">{{ month[post.published_at|date('n')-1][:3] }}</span>
+        </div>
+    </div>
+
+    <div class="post-content">
+        {{ post.full_story|raw }}
+    </div>
+
+    <div class="post_images">
+        <div class="photo-feed">
+            <div class="row">
+                {% for image in post.additional_images %}
+                <div class="photo-feed__item col-lg-2 col-md-3">
+                    <a href="{{ image.path }}" target="_blank">
+                        <img src="{{ image.thumb(300, 300, 'crop') }}">
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+
